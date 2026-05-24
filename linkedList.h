@@ -1,13 +1,15 @@
-struct Node {
+// linkedList.h
+
+typedef struct {
 	struct Node *prev;
 	struct Node *next;
 	int data;
-};
+} Node;
 
-struct Node *IndexAt(struct Node *head, int index);
-struct Node *Last(struct Node *head);
-int Size(struct Node *head);
-int Insert(struct Node *head, int data, int index);
-int Remove(struct Node *head, int index);
-int InsertEnd(struct Node *head, int data);
-int Print(struct Node *head);
+Node *index_at(Node *head, int index);
+Node *end(Node *head);
+int size(Node *head);
+int insert_at(Node *head, int data, int index);
+int insert(Node *head, int data);
+int delete(Node *head, int index);
+int print(Node *head);
