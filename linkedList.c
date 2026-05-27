@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "linkedList.h"
 /*
 ---your code can go here---
@@ -7,7 +8,7 @@
 */
 
 Node *index_at(Node *head, int index) {
-    Node node = *head;
+    Node *node = head->next;
 	/*
     ---your code goes here---
     링크드리스트의 index번째 원소를 반환합니다.
@@ -16,6 +17,7 @@ Node *index_at(Node *head, int index) {
 }
 
 Node *end(Node *head) {
+	Node *node = head;
 	/*
     ---your code goes here---
     링크드리스트의 마지막 원소를 반환합니다.
@@ -24,6 +26,7 @@ Node *end(Node *head) {
 }
 
 int size(Node *head) {
+	Node *node = head->next;
 	/*
     ---your code goes here---
     링크드리스트의 크기를 반환합니다.
@@ -31,7 +34,8 @@ int size(Node *head) {
     */
 }
 
-int insert_at(Node *head, int data, int index) {
+void insert_at(Node *head, int data, int index) {
+	Node *node = head;
 	/*
     ---your code goes here---
     링크드리스트의 index번째에 data를 가진 노드를 생성해 삽입합니다.
@@ -39,7 +43,8 @@ int insert_at(Node *head, int data, int index) {
     */
 }
 
-int insert(Node *head, int data) {
+void insert(Node *head, int data) {
+	Node *node = end(head);
 	/*
     ---your code goes here---
     링크드리스트의 마지막 노드 뒤에 data를 가진 노드를 생성해 삽입합니다.
@@ -47,7 +52,8 @@ int insert(Node *head, int data) {
     */
 }
 
-int delete(Node *head, int index) {
+void delete(Node *head, int index) {
+	Node *node = head->next;
 	/*
     ---your code goes here---
     링크드리스트의 index번째 원소를 제거합니다.
@@ -55,7 +61,8 @@ int delete(Node *head, int index) {
     */
 }
 
-int print(Node *head) {
+void print(Node *head) {
+	Node *node = head->next;
 	/*
     ---your code goes here---
     링크드 리스트의 모든 원소를 출력하고, 원소들 사이에 "->"를 출력하고, 마지막에 "END"를 출력합니다.
